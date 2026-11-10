@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bingo Card Generator</h1>
+
+        <section>
+            <h2>Questions (25 total)</h2>
+            <textarea id="questions" placeholder="Paste or type 25 questions, one per line..." rows="12"></textarea>
+            <div class="count"><span id="count">0</span>/25</div>
+        </section>
+
+        <section>
+            <button id="previewBtn" class="btn">Preview Card</button>
+            <div id="preview"></div>
+        </section>
+
+        <section>
+            <div>
+                <label>Cards to generate: <input type="number" id="numCards" value="5" min="1" max="50"></label>
+            </div>
+            <button id="generateBtn" class="btn btn-primary">Download PDF</button>
+            <button id="exportImageBtn" class="btn btn-primary">Export Image</button>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

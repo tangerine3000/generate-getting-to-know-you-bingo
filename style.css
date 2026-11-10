@@ -130,7 +130,7 @@ input[type="number"] {
 
 .card-subtitle {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: #333;
     margin: 0 0 20px 0;
@@ -178,11 +178,14 @@ input[type="number"] {
 .card-cell.free {
     background: white;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-cell.free::before {
-    content: '★';
-    font-size: 40px;
+    content: 'FREE';
+    font-size: 26px;
+    font-weight: bold;
     color: #000;
 }
 

@@ -142,7 +142,7 @@ function generatePDF() {
 
 function drawCardToPDF(pdf, card, x, y, size) {
     const titleSize = size * 0.08;
-    const subtitleSize = size * 0.06;
+    const subtitleSize = size * 0.075;
     const cellWidth = size / 5;
     const cellHeight = cellWidth * 1.4;
     const fontSize = cellWidth / 12;
@@ -176,8 +176,10 @@ function drawCardToPDF(pdf, card, x, y, size) {
                 pdf.setFillColor(255, 250, 205);
                 pdf.rect(cellX, cellY, cellWidth, cellHeight, 'F');
                 pdf.setFont('helvetica', 'bold');
-                const starWidth = pdf.getTextWidth('★');
-                pdf.text('★', cellX + (cellWidth - starWidth) / 2, cellY + cellHeight / 2 + fontSize / 3);
+                pdf.setFontSize(fontSize * 2.2);
+                const freeWidth = pdf.getTextWidth('FREE');
+                pdf.text('FREE', cellX + (cellWidth - freeWidth) / 2, cellY + cellHeight / 2 + fontSize * 0.6);
+                pdf.setFontSize(fontSize);
             } else {
                 pdf.setFont('helvetica', 'normal');
                 const lines = pdf.splitTextToSize(text, cellWidth - 2);
